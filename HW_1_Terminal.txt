@@ -1,0 +1,63 @@
+HW_1. The first part
+Linux terminal (GitBash) commands
+
+1) Посмотреть где я
+pwd
+2) Создать папку
+mkdir t3
+3) Зайти в папку
+cd t3/
+4) Создать 3 папки
+mkdir t3/sc1 t3/sc2 t3/sc3
+5) Зайти в любую папку
+cd t3/sc1
+6) Создать 5 файлов (3 txt, 2 json)
+touch sc1.txt sc2.txt sc3.txt sc4.json sc5.json
+7) Создать 3 папки
+mkdir sc4 sc5 sc6
+8. Вывести список содержимого папки
+ls -la
+9) + Открыть любой txt файл
+10) + написать туда что-нибудь, любой текст
+11) + сохранить и выйти
+cat >> sc1.txt
+Al Ad Din
+
+[CTRL+D]
+12) Выйти из папки на уровень выше
+cd ..
+13) переместить любые 2 файла, которые вы создали, в любую другую папку
+mv sc4.json sc5.json d:/Testing/t1/ 
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку
+cp t3/sc4.json t3/sc5.json d:/Testing/t3/
+15) Найти файл по имени
+find . -name filename
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает
+tail -f filename | grep -C 5 searchkeys
+# где filename - имя файла, 5 - кол-во отслеживаемых строк до и после искомой, searchkeys - искомый текст
+17) вывести несколько первых строк из текстового файла
+head -4 filename
+18) вывести несколько последних строк из текстового файла
+tail -4 filename
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает
+less filename
+20) вывести дату и время
+date
+=========
+Задание
+1) Отправить http запрос на сервер http://162.55.220.72:5005/terminal-hw-request
+curl http://162.55.220.72:5005/terminal-hw-request
+2) Написать скрипт, который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13:
+cat > fcript
+#!/bin/bash
+
+mkdir t3/sc1 t3/sc2 t3/sc3
+cd t3/sc1
+touch sc1.txt sc2.txt sc3.txt sc4.json sc5.json
+mkdir sc4 sc5 sc6
+ls -l
+mv sc4.json sc5.json d:/Testing/t1/
+
+[CTRL+D]
+chmod +x ./fscript
+./fscript
