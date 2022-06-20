@@ -1,7 +1,7 @@
 jam14man
 GitHub. HW_2
 
-# 1. На локальном репозитории сделать ветки для:
+# 1. Ќа локальном репозитории сделать ветки длЯ:
 - Postman
 - Jmeter
 - CheckLists
@@ -16,7 +16,7 @@ git barnch bagreports
 git barnch SQL
 git barnch charles
 git barnch mobiletesting
-# 2. Запушить все ветки на внешний репозиторий
+# 2. З‡апушить все ветки на внешний репозиторий
 git barnch -u origin postman
 git barnch -u origin jmeter
 git barnch -u origin checklists
@@ -24,22 +24,22 @@ git barnch -u origin bagreports
 git barnch -u origin SQL
 git barnch -u origin charles
 git barnch -u origin mobiletesting
-# 3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта
+# 3. ‚ ветке Bag Reports сделать текстовый документ со структурой баг репорта
 git checkout bagreports
 cat > bag_report.txt
 Check all: All right
 
 [CTRL+D]
-# 4. Запушить структуру багрепорта на внешний репозиторий
+# 4. З‡апушить структуру багрепорта на внешний репозиторий
 git add bag_report.txt
 git commit -m "structure of bag reports"
 git push
-# 5. Вмержить ветку Bag Reports в Main
+# 5. ‚мержить ветку Bag Reports в Main
 git checkout main
 git merge bagreports
-# 6. Запушить main на внешний репозиторий.
+# 6. З‡апушить main на внешний репозиторий.
 git push
-# 7. В ветке CheckLists набросать структуру чек листа.
+# 7. ‚ ветке CheckLists набросать структуру чек листа.
 git checkout checklists
 cat > checklist_new
 проверить открытие и доступность сайта;
@@ -53,13 +53,13 @@ cat > checklist_new
 загрузить документы и проверить корректность загрузки;
 
 [CTRL+C]
-# 8. Запушить структуру на внешний репозиторий
+# 8. З‡апушить структуру на внешний репозиторий
 git add checklist_new
 git commit -m "structure of checklist"
 git push
-# 9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+# 9. Ќа внешнем репозитории сделать Pull Request ветки CheckLists в main
 [Switch branches/tags - checklists - Compare & pull request - Create pull request - Merge pull request - Confirm merge]
-# 10. Синхронизировать Внешнюю и Локальную ветки Main
+# 10. ‘инхронизировать внешнюю и локальную ветки Main
 git checkout main
 git fetch
 git pull
